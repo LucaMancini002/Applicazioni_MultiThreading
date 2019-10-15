@@ -18,8 +18,10 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="Lbl_Risultato" Content="Risultato" HorizontalAlignment="Left" Margin="295,60,0,0" VerticalAlignment="Top" Width="205" Background="White" Height="30"/>
-        <Button x:Name="Btn_Task" Content="Click" HorizontalAlignment="Left" Margin="360,150,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Task_Click" Background="#FF8C81FF" Height="30"/>
+        <Label x:Name="Lbl_Risultato" Content="Risultato" HorizontalAlignment="Left" Margin="60,115,0,0" VerticalAlignment="Top" Width="205" Background="White" Height="30"/>
+        <Button x:Name="Btn_Task" Content="Click" HorizontalAlignment="Left" Margin="120,200,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Task_Click" Background="#FF8A80F9" Height="30"/>
+        <Button x:Name="Btn_Conta" Content="Conta" HorizontalAlignment="Left" Margin="565,200,0,0" VerticalAlignment="Top" Width="75" Click="Btn_Conta_Click" Background="#FF8A80F9" Height="30"/>
+        <Label x:Name="Lbl_Conteggio" Content="Conteggio" HorizontalAlignment="Left" Margin="500,115,0,0" VerticalAlignment="Top" Height="30" Width="210" Background="White"/>
 
     </Grid>
 </Window>

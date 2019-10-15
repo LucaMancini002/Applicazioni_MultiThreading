@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,7 +29,7 @@ namespace App_MultiThreading
         private void Btn_Task_Click(object sender, RoutedEventArgs e)
         {
             //DoWork();
-            Task.Factory.StartNew(DoWork);
+            Task.Factory.StartNew(DoWork); 
         }
 
         private void DoWork()
@@ -47,6 +48,26 @@ namespace App_MultiThreading
         private void AggiornaInterfaccia()
         {
             Lbl_Risultato.Content = "finito";
+        }
+
+        private void Btn_Conta_Click(object sender, RoutedEventArgs e)
+        {
+            Task.Factory.StartNew(DoCount);
+        }
+        private void DoCount()
+        {
+            for (int i = 0; i <= 100000; i++)
+            {
+                for (int j = 0; j <= 100000; j++)
+                {
+                    Dispatcher.Invoke(()=>AggiornaInterfaccia(j));
+                    Thread.Sleep(10000);
+                }
+            }
+        }
+        private void AggiornaInterfaccia(int j)
+        {
+            Lbl_Conteggio.Content = j.ToString();
         }
     }
 }
