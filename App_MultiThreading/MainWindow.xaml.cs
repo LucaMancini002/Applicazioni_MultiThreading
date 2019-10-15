@@ -24,5 +24,10 @@ namespace App_MultiThreading
         {
             InitializeComponent();
         }
+
+        private void Btn_Task_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
