@@ -27,7 +27,20 @@ namespace App_MultiThreading
 
         private void Btn_Task_Click(object sender, RoutedEventArgs e)
         {
+            //DoWork();
+            Task.Factory.StartNew(DoWork);
+        }
 
+        private void DoWork()
+        {
+            for (int i = 0; i <= 100000; i++)
+            {
+                for (int j = 0; j <= 100000; j++)
+                {
+
+                }
+            }
+            Lbl_Risultato.Content = "finito";
         }
     }
 }
