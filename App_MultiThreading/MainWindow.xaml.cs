@@ -40,6 +40,12 @@ namespace App_MultiThreading
 
                 }
             }
+            // AggiornaInterfaccia();
+            Dispatcher.Invoke(AggiornaInterfaccia);
+        }
+
+        private void AggiornaInterfaccia()
+        {
             Lbl_Risultato.Content = "finito";
         }
     }
